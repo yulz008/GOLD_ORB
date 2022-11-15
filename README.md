@@ -4,7 +4,9 @@ Open Range Breakout Expert Advisor for XAUUSD (GOLD)
 Range Breakdown: Short Position
 ![image](https://user-images.githubusercontent.com/117939069/201951342-59ac1ab4-37fc-45f8-880e-5c5ea66127cc.png)
 
+
 Range Breakout: Long Position
+
 ![image](https://user-images.githubusercontent.com/117939069/201953535-3fc70a14-5b7f-4648-a80c-0160accc31aa.png)
 
 Algorithm Structure
