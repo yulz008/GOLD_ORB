@@ -43,7 +43,8 @@ This is best illustrated below:
 
 
 
-https://user-images.githubusercontent.com/117939069/206971212-b0869971-2478-4154-9cf5-5a2ada62373d.mp4
+![Untitled video - Made with Clipchamp (2)](https://user-images.githubusercontent.com/117939069/206971775-758aa0fc-56c5-4e68-a45d-79d0a177a4d4.gif)
+
 
 
 
