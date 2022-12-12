@@ -1,5 +1,19 @@
-# GOLD_ORB_v1
-Open Range Breakout Expert Advisor for XAUUSD (GOLD)  
+Introduction
+GOLD_ORB is an Expert Advisor for XAUUSD (GOLD) and uses 1HR TF written in MQL5.
+
+About the Project
+This project aims to develop a working trading bot (EA) which utilizes price action as buy/sell signal. This project also caters the basics and structure of creating a
+trading bot making it as a guide for beginners on creating their own trading bot. The project is designed so that it is customizable for developers to add new features
+and strategies.
+
+
+Strategy
+GOLD_ORB uses Open Range Breakout strategy to generate buy and sell signals (for opening position long/short)
+
+The opening range is high and low for a given period after the market opens. This period is generally the first 30 or 60 minutes of trading. It is one most important
+chart patterns to make money in the stock market.
+
+
 
 
 Range Breakdown: Short Position
