@@ -42,8 +42,8 @@ This is best illustrated below:
 
 
 
+![EA Working](https://user-images.githubusercontent.com/117939069/206975769-a6170f95-bf78-4efc-b967-593984513111.gif)
 
-![Untitled video - Made with Clipchamp (2)](https://user-images.githubusercontent.com/117939069/206971775-758aa0fc-56c5-4e68-a45d-79d0a177a4d4.gif)
 
 
 
