@@ -34,29 +34,22 @@ generatea buy/sell signal. The "candle compostion" can be adjusted depending on 
 
 ### Strategy Logic
 
+//execute only at the beginning of each new candle
 1. 1HR after market open, get initial range low and high of the candle. (initial support and resistance)
 2. at succeding candles, update range high and low else do nothing 
-3. generate buy/sell signal at breakout/breaokdown on final range.
+3. generate buy/sell signal at breakout/breakdown on final range.
 4. repeat
 
 ### 
 
+// 1 HR Timeframe of XAU/USD, the vertical lines signifies the beginning of trading hours (1:02 server time)
 ![EA Working](https://user-images.githubusercontent.com/117939069/206975769-a6170f95-bf78-4efc-b967-593984513111.gif)
 
 
 
+![image](https://user-images.githubusercontent.com/117939069/206984297-14a01ae2-9019-4608-84c9-70bf85ed253a.png)
 
 
-
-
-Range Breakout: Long Position
-
-![image](https://user-images.githubusercontent.com/117939069/201953535-3fc70a14-5b7f-4648-a80c-0160accc31aa.png)
-
-
-Range Breakdown: Short Position
-
-![image](https://user-images.githubusercontent.com/117939069/201955988-b487401c-3458-40eb-b4ae-1de67ef04795.png)
 
 
 Algorithm Structure
