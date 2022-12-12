@@ -13,9 +13,9 @@ and strategies.
 
 We will first start with our strategy, GOLD_ORB uses Open Range Breakout strategy to generate buy and sell signals (for opening position long/short)
 
-"The opening range is high and low for a given period after the market opens. This period is generally the first 30 or 60 minutes of trading. " The opening hour of the 
-market is associated with big trading volumes and volatility. This time of the trading
-session provides many trading opportunities. In this way, traders use the opening range to set the entry points and to predict and forecast the price action for the
+>"The opening range is high and low for a given period after the market opens. This period is generally the first 30 or 60 minutes of trading. " The opening hour of 
+the market is associated with big trading volumes and volatility. This time of the trading session provides many trading opportunities. In this way, traders use the 
+opening range to set the entry points and to predict and forecast the price action for the
 day.
 
 Once the final range is established we just need to wait for the price to breakout/breakdown on its range. Buy long for breakouts and Short Sell for breakdown, these 
