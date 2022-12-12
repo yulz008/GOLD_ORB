@@ -42,7 +42,11 @@ This is best illustrated below:
 
 
 
-[INSERT GIF that shows the working EA updates the support and resistnace]
+
+https://user-images.githubusercontent.com/117939069/206971212-b0869971-2478-4154-9cf5-5a2ada62373d.mp4
+
+
+
 
 
 Range Breakout: Long Position
