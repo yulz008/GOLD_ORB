@@ -197,8 +197,11 @@ The broker i used to test and run this EA is ICMarkets MT5 (Real Account Server)
 2. Load default inputs
 
 
+## Reference
+
+
 
 ## Disclaimer
 
-
+This code is for educational purposes only. I do NOT guarantee profitable trading results in anyways. USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS. Do not risk money which you are afraid to lose. There might be bugs in the code - this strategies DO NOT come with ANY warranty. All investments carry risk! Past performance is no guarantee of future results!
 
