@@ -2,7 +2,7 @@
 
 GOLD_ORB is an Expert Advisor for XAUUSD (GOLD) on 1HR TF, written in MQL5. 
 
-MQL5 is a C++ based programming language. 
+MQL5 is a C++ based programming language. [3]
 
 ## About the Project
 
@@ -215,11 +215,13 @@ The broker I used to test and run this EA is ICMarkets MT5 (Real Account Server)
 ## Reference
 [1] “Opening range breakouts - what is orb trading strategy? - elearnmarkets.” [Online]. Available: https://www.elearnmarkets.com/blog/how-to-trade-opening-range-breakouts/. [Accessed: 13-Dec-2022]. 
 
-[2] 
+[2] A. R. Young, Expert Advisor Programming for MetaTrader 5: Creating Automated Trading Systems in the MQL5 language. Nashville, TN: Edgehill Publishing, 2013. 
+
+[3] “MQL5 reference - how to use algorithmic/automated trading language for metatrader 5,” MQL5. [Online]. Available: https://www.mql5.com/en/docs. [Accessed: 13-Dec-2022]. 
 
 
 
 ## Disclaimer
 
-This code is for educational purposes only. I do NOT guarantee profitable trading results in anyways. USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS. Do not risk money which you are afraid to lose. There might be bugs in the code - this strategies DO NOT come with ANY warranty. All investments carry risk! Past performance is no guarantee of future results!
+This code is just meant to be used for learning. In no way do I promise profitable trading outcomes. Do not risk money that you can't afford to lose because the authors and any affiliates assume no responsibility for your trading results. This tactics DO NOT come with ANY warranty, thus there may be flaws in the code. Investments are risky by nature! Future outcomes cannot be predicted based on past performance!
 
