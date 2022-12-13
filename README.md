@@ -136,36 +136,57 @@ preprocessor directives followed by the inputs and global variables, then the ob
     
 ## EA Features and Inputs
 
+![image](https://user-images.githubusercontent.com/117939069/207226726-5f667083-e449-4149-ab4f-bb1827c0ac23.png)
+
+
 ### SymbolInformation
 Contains the StartOFTradingHour_ServerTime for XAUUSD the default value for this is "1". 
 
 ### Trade Management
-The Trade Management include adjustable to TakeProfit, StopLoss, MaxTradePerDay
-  - TakeProfit
-  - StopLoss
-  - MaxTradePerDay
-  - LongPosition
-  - ShortPosition
+The Trade Management include adjustable TakeProfit, StopLoss, MaxTradePerDay
+  - TakeProfit      - integer input: default "1200"
+  - StopLoss        - integer input: default "400"
+  - MaxTradePerDay  - integer input: default "2" 
+    - The maximum trade to open a position per day is 2(1-Long and 1-Short). If only 1 trade per day is desired, input must set to "1"
+ 
+  - LongPosition    - default "True"
+  - ShortPosition   - default "True"
  
 ### Trail Management
 To enable Trail
   
 ### Risk Management
-One of the very important feature of this bot is the Risk Management, this automatically calculates the position size relative to the Account size.
-  - MaxEquityDrawdownPercent 
-  - RiskPerTradePercent
-  - FixedLot
+One of the very important feature of this bot is the Risk Management, the EA can automatically calculate the position size relative to the account size.
+  - MaxEquityDrawdownPercent
+      - integer input: default 10 
+      - A "10" on the input means 10%, this means a 10% drawdown from the account will stop the EA from trading.
+  - RiskPerTradePercent      
+      - integer input: default 1
+      - A "1" on the input means that for everytrade, the EA will only risk 1% of the present account balance
+  - FixedLot  
+      - double input: default 0.1
+      - if the user wanted to set a fixed lot per trade, then this could be adjusted here, RiskPerTradePercent must be disable or set to "0"
+ 
+### Advanced Equity Monitoring Module
+  - SlopeDetection - default "False"
+  - LossStreakCounter - integer input: default: 0
  
 ### Indicators
-For this EA, only 1 indicator is available which is the price action. The "Candle Composition" can be adjusted, depending on the consoldidation period the user prefer
+For this EA, only 1 indicator is available: price action(PA). The "Candle Composition" can be adjusted, depending on the consoldidation period the user prefer. Default value is "3"
 
-### Advanced Equity Monitoring Module
 
-## Backtest
+### Broker and Hedging Mode
 
-![image](https://user-images.githubusercontent.com/117939069/201954432-3b38daf8-e183-4cfa-8384-3f88e2d8fc1c.png)
+The broker i used to test and run this EA is ICMarkets MT5 (Real Account Server). Hedging mode is enabled on the broker which means that different open position will be place on each buy/sell order on the same trading symbol (eg XAU/USD GOLD). You will notice once the EA is running 3-7+ position is open with different direction but under the same symbol. This is called hedging mode which is the opposite of netting mode
 
-![image](https://user-images.githubusercontent.com/117939069/201954567-2c30a2c0-ec65-4bf6-83ac-59ddee0d188b.png)
+
+## Backtest and Results
+
+![image](https://user-images.githubusercontent.com/117939069/207229689-e2f05309-f80a-4fa1-86f3-731bcd2b735b.png)
+![image](https://user-images.githubusercontent.com/117939069/207229753-0e2b3829-2c2b-4a06-ba0c-622e8e6b7da9.png)
+
+
+
 
 
 ## How to use the EA
