@@ -25,7 +25,9 @@ are the signals to be generated.
 
 For commodities such as GOLD(XAUUSD) the market open around 1:02 (server time) which is the start of trading hour.
 
-Since GOLD_ORB uses 1HR TF, 1 hour after the market opens, the "initial" range will be calculated. This is nothing but the high and low of the 1st candle of day on the H1 timeframe. This will become the initial low(support) and high(resistance) of the range. This is not yet the "final" range, the high and low will be updated on the incoming candles. The EA is configured to wait for at least 3 "candle composition" or upcoming candles must consolidate within the initial range so the range can be considered "final".  Otherwise, the EA will just update the new support or resistance on the incoming candles if it has a new low or new high. Once the minimum "candle composition" is meet the range is now considered final. And if a breakout/breakdown happens on the "final" range it will generate buy/sell signal. The "candle composition" can be adjusted depending on the user preference but by default it set as “3”.
+Since GOLD_ORB uses 1HR TF, 1 hour after the market opens, the "initial" range will be calculated. This is nothing but the high and low of the 1st candle of day on the H1 timeframe. This will become the initial low(support) and high(resistance) of the range. This is not yet the "final" range, the high and low will be updated on the incoming candles. The EA is configured to wait for at least 3 "candle composition" or upcoming candles must consolidate within the initial range so the range can be considered "final".  Otherwise, the EA will just update the new support or resistance on the incoming candles if it has a new low or new high.
+
+Once the minimum "candle composition" is meet the range is now considered final. And if a breakout/breakdown happens on the "final" range it will generate buy/sell signal. The "candle composition" can be adjusted depending on the user preference but by default it set as “3”.
 
 
 
@@ -85,8 +87,11 @@ preprocessor directives followed by the inputs and global variables, then the ob
    additional variables used to interact with the input and output of different classes and functions within the program.
    
 **Classes** 
-   - This section creates the object from a specific class. It is important to note that before we can create the object, we must first include the file where the class definition in located. The following are the classes that will be used on the EA. Some of these classes and functions are found on the book, and are reused on this EA to save time from developing. (denoted in *) 
+
+   -  All includes files(mqh) are located here GOLD_ORB_v1/GOLD_ORB/Include
+   - This section creates the object from a specific class. It is important to note that before we can create the object, we must first include the file where the class definition in located. The following are the classes that will be used on the EA. Some of these classes and functions are found on the book, and are reused on this EA to save time from developing. (denoted in *)  
    
+ 
       - *CTrade - for excuting orders
       - *CTrailing - for trail stops
       - *CiMA - a class for time series indicator: Moving average
@@ -95,7 +100,9 @@ preprocessor directives followed by the inputs and global variables, then the ob
       - CTrailingVirtual - for virtual trail stops
       - VirtualTradeInfo - Virtual Environment: information on the virtualtrades
 
+
 **Event handler**
+  
   Event handlers are the method by which and MQL5 runs. It executes whenever a certain event occurs.[2] 
   For this EA two event handlers where used:
      - OnInit() - runs once the program starts, this is were we can initialize our function or objects
