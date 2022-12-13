@@ -186,12 +186,17 @@ The broker i used to test and run this EA is ICMarkets MT5 (Real Account Server)
 ![image](https://user-images.githubusercontent.com/117939069/207229753-0e2b3829-2c2b-4a06-ba0c-622e8e6b7da9.png)
 
 
-
-
-
 ## How to use the EA
 
-## Revisions
+### Backtesting
+1. After copying the project folder to MQL5 directory. Perform first recalibration test to ensure its functionality. See Test Cases folder
+2. EA can be used for backtesting other TimePeriod, Timeframes, Pairs and Etc. this are all customizable. Please do note the starting trading time for different pairs. Different pairs open on different server time.
+
+### Forward Testing
+1. Attach the MQL program to chart
+2. Load default inputs
+
+
 
 ## Disclaimer
 
