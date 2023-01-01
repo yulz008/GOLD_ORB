@@ -227,7 +227,6 @@ The broker I used to test and run this EA is ICMarkets MT5 (Real Account Server)
 [3] “MQL5 reference - how to use algorithmic/automated trading language for metatrader 5,” MQL5. [Online]. Available: https://www.mql5.com/en/docs. [Accessed: 13-Dec-2022]. 
 
 
-
 ## Disclaimer
 
 This code is just meant to be used for learning. In no way do I promise profitable trading outcomes. Do not risk money that you can't afford to lose because the authors and any affiliates assume no responsibility for your trading results. This strategy DO NOT come with ANY warranty, thus there may be flaws in the code. Investments are risky by nature! Future outcomes cannot be predicted based on past performance!
