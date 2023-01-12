@@ -5,6 +5,7 @@ GOLD_ORB is an Expert Advisor for XAUUSD (GOLD) on 1HR TF, written in MQL5.
 MQL5 is a C++ based programming language.
 
 
+
 ## About the Project
 
 This project aims to develop a working trading bot (EA) which utilizes price action as buy/sell signal. This project also caters the structure of creating a
