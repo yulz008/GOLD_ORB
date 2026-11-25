@@ -135,7 +135,7 @@ public:
 
 // Open position
 // 110 - 120 Code explanation on "Expert Advisor Programming for MetaTrader5""
-bool CTradeVirtual::OpenPosition(VirtualTradeInfo &vTrade, string pSymbol, ENUM_ORDER_TYPE pType, double pVolume, double pStop = 0, double pProfit = 0, string pComment = NULL)
+bool CTradeVirtual::OpenPosition(VirtualTradeInfo &vTrade, string pSymbol, ENUM_ORDER_TYPE pType, double pVolume, double pStop, double pProfit, string pComment)
   {
 
    //Position Info
@@ -365,7 +365,7 @@ bool CTradeVirtual::OpenPending(VirtualTradeInfo &vTrade,int index, string pType
 
 
 // Trade opening shortcuts
-bool CTradeVirtual::Buy(VirtualTradeInfo &vTrade, string pSymbol,double pVolume,double pStop=0.000000,double pProfit=0.000000,string pComment=NULL)
+bool CTradeVirtual::Buy(VirtualTradeInfo &vTrade, string pSymbol,double pVolume,double pStop,double pProfit,string pComment)
   {
    bool success = OpenPosition(vTrade, pSymbol,ORDER_TYPE_BUY,pVolume,pStop,pProfit,pComment);
    return(success);
@@ -374,7 +374,7 @@ bool CTradeVirtual::Buy(VirtualTradeInfo &vTrade, string pSymbol,double pVolume,
 //+------------------------------------------------------------------+
 //|                                                                  |
 //+------------------------------------------------------------------+
-bool CTradeVirtual::Sell(VirtualTradeInfo &vTrade, string pSymbol,double pVolume,double pStop=0.000000,double pProfit=0.000000,string pComment=NULL)
+bool CTradeVirtual::Sell(VirtualTradeInfo &vTrade, string pSymbol,double pVolume,double pStop,double pProfit,string pComment)
   {
    bool success = OpenPosition(vTrade, pSymbol,ORDER_TYPE_SELL,pVolume,pStop,pProfit,pComment);
    return(success);
