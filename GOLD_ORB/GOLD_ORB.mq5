@@ -48,7 +48,7 @@ input double FixedVolume = 0.1;
 
 input group "Advanced Equity Monitoring Module"
 input bool SlopeDetection = false;
-input int LossStreakCounter = 0;
+input int LossStreakLimit = 0;
 
 input group "Indicators"
 input int PriceActionORB_CandleComposition = 3;
@@ -106,7 +106,7 @@ int OnInit()
    //Extra Variables (test cases)
    execute_trade = true;
    capital = AccountInfoDouble(ACCOUNT_BALANCE);
-   return("Initialization Success");
+   return(INIT_SUCCEEDED);
   }
 
 
@@ -166,9 +166,9 @@ void RiskManagementModule(void)
 
 
    //This module will detect if Lossing streak ended depending on the input integer and if equity is recovering, upward
-   if(SlopeDetection || LossStreakCounter!=0)
+   if(SlopeDetection || LossStreakLimit!=0)
      {
-      bool LossStreak_flag = LossStreakCounter(VTrade,3); //Lossing Streak Detection
+      bool LossStreak_flag = (LossStreakLimit > 0) ? LossStreakCounter(VTrade,LossStreakLimit) : false; // Losing streak detection
       bool Slope_Equity_Flag = CheckSlope(VTrade,12); // Slope Equity Monitoring
 
       if(LossStreak_flag)
@@ -231,7 +231,10 @@ void IndicatorModule(void)
    // Moving Average indicator
    MA100.Init(_Symbol,PERIOD_CURRENT,100,0,MODE_SMA,PRICE_CLOSE); 
    double ma = MA100.Main(0); // get the value of the latest ma value wrt to latest candle
-   iClose(_Symbol,_Period,1) > ma ? indicator_3 = true:indicator_3 = false; //compare the value with the candle
+   if(iClose(_Symbol,_Period,1) > ma)
+      indicator_3 = true;
+   else
+      indicator_3 = false; // Compare the previous candle close with the moving average
 
   }
 
