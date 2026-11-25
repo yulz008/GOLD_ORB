@@ -55,7 +55,7 @@ public:
 
 // Open position
 // 110 - 120 Code explanation on "Expert Advisor Programming for MetaTrader5""
-bool CTrade::OpenPosition(string pSymbol, ENUM_ORDER_TYPE pType, double pVolume, double pStop = 0, double pProfit = 0, string pComment = NULL)
+bool CTrade::OpenPosition(string pSymbol, ENUM_ORDER_TYPE pType, double pVolume, double pStop, double pProfit, string pComment)
   {
    ZeroMemory(request);
    ZeroMemory(result);
@@ -109,7 +109,7 @@ bool CTrade::OpenPosition(string pSymbol, ENUM_ORDER_TYPE pType, double pVolume,
       else
          if(checkCode == CHECK_RETCODE_ERROR) //error handling for failed order
            {
-            string errDesc =  (result.retcode);
+            string errDesc = TradeServerReturnCodeDescription(result.retcode);
             Alert("Open market order: Error ",result.retcode," - ",errDesc);
             LogTradeRequest();
             break;
@@ -149,7 +149,7 @@ bool CTrade::OpenPosition(string pSymbol, ENUM_ORDER_TYPE pType, double pVolume,
 
 
 // Open pending order
-bool CTrade::OpenPending(string pSymbol,ENUM_ORDER_TYPE pType,double pVolume,double pPrice,double pStop=0.000000,double pProfit=0.000000,double pStopLimit = 0,datetime pExpiration=0,string pComment=NULL)
+bool CTrade::OpenPending(string pSymbol,ENUM_ORDER_TYPE pType,double pVolume,double pPrice,double pStop,double pProfit,double pStopLimit,datetime pExpiration,string pComment)
   {
    ZeroMemory(request);
    ZeroMemory(result);
@@ -240,7 +240,7 @@ void CTrade::LogTradeRequest()
 
 
 // Trade opening shortcuts
-bool CTrade::Buy(string pSymbol,double pVolume,double pStop=0.000000,double pProfit=0.000000,string pComment=NULL)
+bool CTrade::Buy(string pSymbol,double pVolume,double pStop,double pProfit,string pComment)
   {
    bool success = OpenPosition(pSymbol,ORDER_TYPE_BUY,pVolume,pStop,pProfit,pComment);
    return(success);
@@ -249,7 +249,7 @@ bool CTrade::Buy(string pSymbol,double pVolume,double pStop=0.000000,double pPro
 //+------------------------------------------------------------------+
 //|                                                                  |
 //+------------------------------------------------------------------+
-bool CTrade::Sell(string pSymbol,double pVolume,double pStop=0.000000,double pProfit=0.000000,string pComment=NULL)
+bool CTrade::Sell(string pSymbol,double pVolume,double pStop,double pProfit,string pComment)
   {
    bool success = OpenPosition(pSymbol,ORDER_TYPE_SELL,pVolume,pStop,pProfit,pComment);
    return(success);
