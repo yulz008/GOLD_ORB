@@ -159,9 +159,13 @@ void RiskManagementModule(void)
      {
       if(AccountInfoDouble(ACCOUNT_BALANCE)>capital)
          capital = AccountInfoDouble(ACCOUNT_BALANCE);
-      if(100*((AccountInfoDouble(ACCOUNT_BALANCE) - capital)/capital) < -1* MaxEquityDrawdownPercent)
-         printf(100*((AccountInfoDouble(ACCOUNT_BALANCE) - capital)/capital));
+      double drawdown_percent = 100.0 * (AccountInfoDouble(ACCOUNT_BALANCE) - capital) / capital;
+      if(drawdown_percent <= -MaxEquityDrawdownPercent)
+        {
+         PrintFormat("Maximum balance drawdown reached: %.2f%% (limit: %.2f%%)",
+                     drawdown_percent, MaxEquityDrawdownPercent);
          execute_trade = false;
+        }
      }
 
 
